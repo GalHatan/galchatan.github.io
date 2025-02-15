@@ -1,21 +1,17 @@
-/* קובץ CSS חדש */
-
 /* 1: צבע רקע כללי */
 body {
-    background-color: #ffffff; /* רקע לבן */
+    background-color: #ffffff;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', 'Arial', sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     color: #222;
 }
 
 /* 2: עיצוב כותרות */
 h1 {
-    color: #000000; /* צבע שחור עבור ניגודיות טובה */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #000000;
     text-align: center;
-    margin-top: 40px;
     font-size: 3.2em;
     font-weight: 600;
     letter-spacing: 1.5px;
@@ -23,68 +19,29 @@ h1 {
 
 /* 3: עיצוב תמונות */
 img {
-    border: 4px solid #444;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
-    margin: 25px auto;
-    display: block;
     transition: transform 0.3s;
 }
-
 img:hover {
     transform: scale(1.1);
 }
 
-/* 4: עיצוב קישורים */
-a {
-    color: #0056b3;
-    font-weight: bold;
-    font-size: 1.5em;
-    transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-    color: #003d82;
-    text-decoration: underline;
-}
-
-/* 5: עיצוב פסקאות */
-p {
-    font-size: 1.8em;
-    color: #333;
-    margin: 20px;
-    line-height: 1.7;
-    text-align: center;
-}
-
-/* 6: עיצוב תחתית הדף */
-footer {
-    text-align: center;
-    padding: 15px;
-    font-size: 1.1em;
-    color: #333;
-    background-color: #f0f0f0;
-    border-top: 2px solid #d0d0d0;
-}
-
-/* 7: גלילה חלקה */
-html {
-    scroll-behavior: smooth;
-}
-
-/* 8: אפקט כותרת */
-h1 {
-    animation: slideDown 1.5s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
+/* 4: עיצוב רספונסיבי עם מדיה קווארי */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    p {
+        font-size: 1.2em;
     }
 }
-
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+}
